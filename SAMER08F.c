@@ -20,6 +20,6 @@ int main(int argc, char* argv[]){
         printf("%d\n",squares(n) );
     }
 
-    //Worked!   
+    //Worked!  Just some simple C code! 
     return 0;
 }

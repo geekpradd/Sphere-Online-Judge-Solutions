@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int power(int a, int b){
-    int i;
-    int r=1;
+long long power(long long a, long long b){
+    long long i;
+    long long r=1;
     for (i=0;i<b;++i){
         r = r*a;
     }
@@ -16,11 +16,11 @@ int main(int argc, char* argv[]){
     scanf("%d", &cases);
     int i;
     for (i=0;i<cases;++i){
-        int a,b;
-        scanf("%d %d", &a, &b);
-        int result =  power(a,b); 
+        long long a,b;
+        scanf("%llu %llu", &a, &b);
+        long long result =  power(a,b); 
         char str[1000000];
-        sprintf(str, "%d", result);
+        sprintf(str, "%llu", result);
         char out = str[strlen(str)-1];
         printf("%c\n",out );
     }

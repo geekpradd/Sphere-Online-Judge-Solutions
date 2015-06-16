@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-//see http://math.stackexchange.com/questions/368973/finding-the-last-digit-in-a-large-exponent
+//Slight modification of lastdig.. Uses strings
 //Solved 16 June 2015
-//THis is much better than the Python one as I implement the code myself
-//Number Theory!
-int g(int a, int b){
+int g(string  a, long long b){
     if (b==0){
         return 1;
     }
-    int x= a%10;
+    int x = a.back()  - '0';;
     if (b==1){
         return x;
     }
@@ -23,7 +21,8 @@ int main(){
     int cases;
     cin >> cases;
     while (cases--){
-        int a,b;
+        string a;
+        long long b;
         cin >> a;
         cin >> b;
         cout << g(a,b) << endl;

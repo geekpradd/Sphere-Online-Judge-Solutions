@@ -1,12 +1,17 @@
-from math import factorial 
-from itertools import groupby 
-def z(n):
-    l = [[k,len(list(g))] for k, g in groupby(str(n))]
-    if not l[-1][0] == "0":
-        return 0 
-    else:
-        return l[-1][-1]
+from math import log
+def is_p(n):
+    return 5**int(log(n,5))==n
 cases = int(input(""))
 for a in range(cases):
-    num = int(input(""))
-    print (z(factorial(num)))
+    number = int(input(""))
+    if number in [0,1]:
+        print (0)
+    else:
+        n = 5
+        total = 0
+        while n < number:
+            total += number//n 
+            n *= 5
+        if is_p(number):
+            total+=1
+        print (total)

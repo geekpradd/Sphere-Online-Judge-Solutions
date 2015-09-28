@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <cstdio>
+#include <bits/stdc++.h>
 #include <vector>
 using namespace std;
 void doStuff(vector<int> &r, long long *a, long long *b){
